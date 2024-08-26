@@ -1,0 +1,41 @@
+.custom-slider {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, 
+      #e2e8f0 calc((var(--low-value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+      #38b2ac calc((var(--low-value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+      #38b2ac calc((var(--high-value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+      #e2e8f0 calc((var(--high-value) - var(--min)) / (var(--max) - var(--min)) * 100%)
+    );
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .custom-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4a5568;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4a5568;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-slider::-webkit-slider-thumb:hover,
+  .custom-slider::-moz-range-thumb:hover {
+    background-color: #2d3748;
+  }
+  
